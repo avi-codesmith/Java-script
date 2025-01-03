@@ -1,12 +1,12 @@
-// for (let rep = 1; rep <= 10; rep++) {
-//   console.log(`this is rep. 1 ${rep}`);
-// }
+for (let rep = 1; rep <= 10; rep++) {
+  console.log(`this is rep. 1 ${rep}`);
+}
 
-// let rep = 1;
-// while (rep <= 10) {
-//   console.log(`this is rep. 1 ${rep}`);
-//   rep++;
-// }
+let rep = 1;
+while (rep <= 10) {
+  console.log(`this is rep. 1 ${rep}`);
+  rep++;
+}
 
 const calcTip = function (bill) {
   return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
