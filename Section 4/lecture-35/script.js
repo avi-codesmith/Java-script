@@ -1,19 +1,15 @@
-const temp = [3, -5, 4, 45, -3, 9, 6, -6, 19, -13];
-
-const calcTipFunction = (temps) => {
-  let max = -Infinity;
-  let min = Infinity;
+calcTempAltitude = (temps) => {
+  let max = temps[0];
+  let min = temps[0];
 
   for (let i = 0; i < temps.length; i++) {
-    max = Math.max(max, temps[i]);
-    min = Math.min(min, temps[i]);
-    console.log(
-      `Step ${i}: Current Value = ${temps[i]}, Max = ${max}, Min = ${min}`
-    );
+    if (typeof temps.i !== "number") continue;
+    if (temps[i] > max) max = temps[i];
+    if (temps[i] < min) min = temps[i];
   }
 
-  return { max, min };
+  console.log(max);
+  console.log(min);
 };
 
-const result = calcTipFunction(temp);
-console.log("Final Result:", result);
+calcTempAltitude([1, 9, 2, 3, 4]);
