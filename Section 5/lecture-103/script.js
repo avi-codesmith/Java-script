@@ -58,3 +58,24 @@ for (let i = 0; i < 3; i++) {
     console.log(i);
   }, 1000);
 }
+
+const func = () => {
+  console.log(b);
+};
+
+var b = 10;
+func();
+
+const changeBtn = document.createElement("button");
+const body = document.querySelector("body");
+const colors = ["orange"];
+body.appendChild(changeBtn);
+changeBtn.innerHTML = colors[0];
+
+const change = (color) => {
+  body.style.backgroundColor = `${color}`;
+};
+
+changeBtn.addEventListener("click", () => {
+  change(colors[0]);
+});
