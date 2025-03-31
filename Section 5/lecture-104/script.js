@@ -1,11 +1,11 @@
-"use strict";
+// "use strict";
 
-const newFunc = () => {
+function newFunc() {
   const variable = "x";
-  const innerFunc = () => {
+  function innerFunc() {
     console.log(variable);
-  };
-  innerFunc();
-};
+  }
+}
+innerFunc();
 
 newFunc();
