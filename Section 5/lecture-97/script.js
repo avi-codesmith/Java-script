@@ -41,3 +41,15 @@ const z = 10;
 console.log(x === window.x);
 console.log(y === window.y);
 console.log(z === window.z);
+
+function startTimer() {
+  console.log("Timer started");
+
+  setTimeout(() => {
+    console.log(message); // This will be in the TDZ if accessed before initialization
+  }, 1000);
+
+  let message = "Hello after 1 second";
+}
+
+startTimer();
