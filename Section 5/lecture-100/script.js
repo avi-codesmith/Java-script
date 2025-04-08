@@ -1,42 +1,31 @@
-const jonas = {
-  firstName: "jonas",
+"use strict";
+
+// const name = "madilta";
+
+const user = {
+  name: "jonas",
   year: 1991,
-  calcAge: function () {
-    console.log(2037 - this.year);
-
-    // Solution 1
-    // const self = this;
-    // const ismillenial = function () {
-    //   console.log(this);
-    //   console.log(self.year >= 1981 && self.year <= 1996);
-    // };
-    // ismillenial();
-
-    const ismillenial = () => {
-      console.log(this);
-      console.log(this.year >= 1981 && this.year <= 1996);
-    };
-
-    ismillenial();
-  },
-  greet: () => {
+  caclAge: function () {
     console.log(this);
-    console.log(`Hey ${this.firstName}`);
+    console.log(2017 - this.year);
+
+    const self = this;
+    const ismellenial = function () {
+      if (self.year >= 1981 && self.year <= 1996) {
+        console.log("Yes you are!");
+      } else {
+        console.log("Sorry");
+      }
+    };
+    ismellenial();
+  },
+  greet: function () {
+    console.log(this);
+    console.log(this.name);
   },
 };
 
-jonas.greet();
-jonas.calcAge();
+user.caclAge();
+user.greet();
 
-const addEpx = function (a, b) {
-  console.log(arguments);
-  return 2 + 5;
-};
-addEpx(2, 5);
-
-var addArrow = (a, b) => {
-  console.log(arguments);
-  return a + b;
-};
-
-addArrow(2, 5, 8);
+// console.log(this.name);
