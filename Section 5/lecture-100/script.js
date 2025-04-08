@@ -45,11 +45,17 @@ user.greet();
 
 // console.log(this.name);
 
-const AddExpressions = (a, b) => {
+function AddExpressions(a, b) {
   console.log(arguments);
+  return a + b;
+}
+
+AddExpressions(2, 5);
+
+const addArrow = (a, b) => {
+  console.log(arguments);
+
   return a + b;
 };
 
-AddExpressions(2, 5, 6, 6);
-
-var addArrow = (a, b) => a + b;
+addArrow(2, 8);
