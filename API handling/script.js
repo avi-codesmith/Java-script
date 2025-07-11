@@ -18,11 +18,9 @@ api
 
 const numbers = [10, 20, 30];
 
-// Traditional way:
 let first = numbers[0];
 let second = numbers[1];
 
-// Destructuring way:
 const [a, b] = numbers;
 
 console.log(a); // 10
