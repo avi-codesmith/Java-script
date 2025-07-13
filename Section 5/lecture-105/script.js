@@ -91,6 +91,10 @@ if (apiUser === apiUser2) {
 
 let va1;
 
-va1 = null ?? 10;
+va1 = undefined ?? 50 ?? 60;
 
 console.log(va1);
+
+const computer = false;
+
+computer ? console.log("yes") : console.log("nhi hai");
