@@ -77,3 +77,20 @@ switch (currmonth) {
   default:
     console.log("default");
 }
+
+const apiUser = [1, 2, 3];
+const apiUser2 = [1, 2, 3];
+
+if (apiUser === apiUser2) {
+  console.log(typeof apiUser);
+  console.log("hi it's here");
+} else {
+  console.log("NO ");
+  console.log(typeof apiUser);
+}
+
+let va1;
+
+va1 = null ?? 10;
+
+console.log(va1);
