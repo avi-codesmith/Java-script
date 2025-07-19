@@ -184,3 +184,33 @@ secondLi.replaceWith(newLi);
 
 const firstElement = document.querySelector("li:first-child");
 firstElement.outerHTML = `<li>TypeScript</li>`;
+
+document.addEventListener("keyup", (e) => {
+  if (e.key === "Enter") {
+    const body = document.querySelector("body");
+    const div = document.createElement("div");
+    div.classList.add("box");
+    div.style.top = `${e.clientY}px`;
+    div.style.left = `${e.clientX}px`;
+    body.appendChild(div);
+    setTimeout(() => {
+      div.remove();
+    }, 1000);
+  }
+});
+
+console.log("Hi");
+
+const promise2 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve({ name: "avi", course: "cahi" });
+  }, 1000);
+});
+
+promise2.then((data) => {
+  console.log(data);
+});
+
+promise2.catch((error) => {
+  console.log(error);
+});
